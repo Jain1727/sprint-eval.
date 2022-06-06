@@ -1,0 +1,98 @@
+/* Fill CSS here */
+* {
+    box-sizing: border-box;
+} 
+h1 {
+    text-align: center;
+    font-size: 50px;
+    font-family: monospace;
+    text-decoration: underline;
+    color:rgb(223, 50, 79)
+    
+
+}
+
+
+div{
+    display: flex;
+    justify-content: space-around;
+}
+
+form {
+    margin: 0 auto;
+    margin-top: 50px;
+    width:30%;
+    box-shadow: rgba(149,157,165,0.2) 0px 8px 22px;
+    padding: 30px;
+}
+
+label {
+    font-size: 22px;
+}
+
+table {
+    font-family: Arial, Helvetica, sans-serif;
+    width:60%;
+    margin: auto;
+    margin-top: 30px;
+    text-align: center;
+    border-color: beige;
+}
+
+table td, table th {
+    border: 1px solid #ddd;
+    padding:8px;
+    text-align: center;
+}
+
+table tr:nth-child(even) {
+    background-color: blanchedalmond;
+}
+
+table tr:hover {
+
+    background-color: aquamarine;
+}
+
+table th {
+    padding-top: 14px;
+    padding-bottom: 14px;
+    text-align: left;
+    background-color: blue;
+    color:azure;
+    text-align: center;
+}
+
+input[type="text"],
+input[type="number"],
+select, textarea {
+    width:100%;
+    padding: 12px;
+    border: 1px solid #cdcdcd;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize:vertical;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type= "submit"] {
+    background-color: aqua;
+    color: bisque;
+    padding: 12px 20px;
+    border-radius: 20px;
+    border:none;
+    font-size:20px;
+    cursor:pointer;
+    width:100%;
+}
+
+input[type="submit"]:hover {
+    background-color: aqua;
+}
+
+
+
+
+
+

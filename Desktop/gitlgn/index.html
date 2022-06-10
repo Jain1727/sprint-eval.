@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoginPage</title>
+    <style>
+        body{
+            background-color: rgb(217, 144, 251);
+        }
+        #box{
+            background-color: rgb(50,189,254);
+            border: 2px solid black;
+            margin: auto;
+            width: 400px;
+            height: 400px;
+            margin-top: 100px;
+            font-size: 30px;
+            padding-left: 30px;
+        }
+        input{
+            font-size: 30px;
+            color: black;
+            text-align: center;
+        }
+        button{
+            background-color: black;
+            color: whitesmoke;
+            font-size: 30px;
+            margin-left: 120px;
+            margin-top: 20px;
+        }
+        #h1{
+          
+           text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="h1"> Login</h1>
+    <div id="box">
+        <label for="">Name</label>
+        <input type="text" placeholder="Enter Name" id="name">
+        <label for="">Email</label>
+        <input type="email" placeholder="Enter Email" id="email">
+        <label for="">Number</label>
+        <input type="number" name="" id="mobile" placeholder="Enter Mobile Number">
+        <label for="">Password</label>
+        <input type="password" placeholder="Enter Password " id="password">
+        <button onclick="login()">Login</button>
+    </div> 
+</body>
+</html>
+<script>
+    var userarr = JSON.parse(localStorage.getItem("user")) || [];
+    function login(){
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let mob = document.getElementById("mobile").value;
+        let pass = document.getElementById("password").value;
+        var userCredential = {
+            Name:name,
+            Email:email,
+            Mob:mob,
+            Pass:pass,
+        }
+        userarr.push(userCredential);
+        localStorage.setItem("user",JSON.stringify(userarr));
+        window.location.href = "mens.html";
+        //please connect login.html
+        // same local storage data used in login page
+    }
+</script>
